@@ -3,11 +3,11 @@
 
 var rocky = require("rocky");
 
-var screenColor = "white";
-var barColor = "red";
-var loadColor = "black";
+var screenColor = "black";
+var barColor = "white";
+var loadColor = "red";
 var tickColor = "darkgrey";
-var textColor = "black";
+var textColor = "white";
 
 var loadOffSet = 3;
 
@@ -139,7 +139,7 @@ rocky.on("draw", function(event) {
 	var days = findMonthDays(ctx, d);
 	var minuteLength = (d.getMinutes() / 60) * loadWidth;
 	var hourLength = (d.getHours() / 24) * loadWidth;
-	var dayLength = (d.getDate() / days) * loadWidth;
+	var dayLength = (d.getDate()  / days) * loadWidth;
 	
 	ctx.clearRect(0, 0,
 				  ctx.canvas.clientWidth, ctx.canvas.clientHeight);
